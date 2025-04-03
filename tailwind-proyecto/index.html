@@ -8,7 +8,7 @@
     <title>Tailwind Proyecto</title>
   </head>
   <body>
-    <header class="flex items-center justify-between p-4 bg-teal-400 shadow-sm">
+    <header class="flex items-center justify-between p-4 bg-zinc-200 shadow-sm">
       <div>
         <h1 class="font-bold">My Portfolio</h1>
       </div>
@@ -20,6 +20,99 @@
       <button class="block md:hidden" id="mobile-nav-btn">
         <span class="block w-6 h-[2px] bg-black mb-1"></span><span class="block w-6 h-[2px] bg-black mb-1"></span><span class="block w-6 h-[2px] bg-black mb-1"></span></button>
     </header>
+    <!-- Se pueden agregar colores de variables establecidas en la configuración de tailwind, como es el caso del gradient y así con todas las 
+     variables que nosotros declaremos en el apartado de `extend` -->
+      <!-- Hero section -->
+    <section class="flex flex-col-reverse gap-3 md:flex-row items-center justify-around bg-gradient-to-r from-primary to-secondary text-primary-foreground py-12 px-4">
+      <!-- Mediante flex-col-reverse hacemos que cuando la web se visite desde dispositivo movil, la imagen se superponga en la parte de arriba de la web, permitiendo que 
+       los elementos no se nos amontonen y se vea más limpio -->
+      <div class="text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome to my portfolio</h2>
+        <p class="text-xl mb-6">Hi! I'm a developer, discover my skills on this portfolio and my latest projects!</p>
+
+        <div class="flex flex-col md:flex-row gap-4">
+          <a class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary" href="#">Get started</a>
+          <a class="px-6 py-3 bg-primary text-primary-foreground rounded-md shadow-md hover:bg-secondary" href="#">Learn more</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://picsum.photos/400/300" alt="placeholder" class="rounded max-w-xs md:max-w-md">
+      </div>
+    </section>
+    <!-- About section -->
+     <section 
+     class="flex flex-col gap-3 md:flex-row items-center justify-around bg-muted text-foreground py-12 px-4"> 
+     <div>
+      <img src="https://picsum.photos/400/300" alt="about image"
+      class="rounded max-w-xs md:max-w-md">
+     </div>
+     <div class="max-w-lg">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="mb-6">
+        I'm a web developer dedicated to create proffesionals web desings, always ready to create 
+        and work in new projects! 
+      </p>
+     </div>
+     <div class="flex flex-col md:flex-row gap-4">
+      <div class="bg-card p-6 rounded shadow-md text-center flex-1">
+        <h3 class="text-4xl font-bold">150+</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="bg-card p-6 rounded shadow-md text-center flex-1">
+        <h3 class="text-4xl font-bold">120</h3>
+        <p>Satisfied Clients</p>
+      </div>
+      <div class="bg-card p-6 rounded shadow-md text-center flex-1">
+        <h3 class="text-4xl font-bold">10</h3>
+        <p>Years of experience (and many errors solved)</p>
+      </div>
+     </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="bg-muted text-foreground py-12 px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Project 1</h3>
+          <p>A brief description of Project 1</p>
+        </div>
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Project 2</h3>
+          <p>A brief description of Project 2</p>
+        </div>
+        <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+          <h3 class="text-2xl font-bold">Project 3</h3>
+          <p>A brief description of Project 3</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+
+    <section class="bg-muted text-foreground py-12 px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+            <h3 class="text-2xl font-bold">Skill 1</h3>
+            <p>Description of skill 1.</p>
+          </div>
+          <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+            <h3 class="text-2xl font-bold">Skill 2</h3>
+            <p>Description of skill 2.</p>
+          </div>
+          <div class="bg-card p-6 rounded shadow-md hover:translate-y-[-5px]">
+            <h3 class="text-2xl font-bold">Skill 3</h3>
+            <p>Description of skill 3.</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="text-center py-4 bg-background text-foreground">
+      <p class="text-sm">&copy; 2025 BrandName. All Rights Reserved.</p>
+    </footer>
   <script>
     // Con este script nos encargamos de hacer que el boton en formato mobile 
     // sea responsive, que se habra la hamburguesa del boton del menú
